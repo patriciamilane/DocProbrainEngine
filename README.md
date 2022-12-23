@@ -23,5 +23,19 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 
 Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Através das implementações programadas, a aplicação realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine.
 
+### Diagrama de diretorios
+
+  <img src="https://github.com/patriciamilane/DocProbrainEngine/blob/main/img/Screenshot_1.png" width="650" />
+  
+  ### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
 
 
