@@ -48,7 +48,7 @@ Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, 
 
 ### Diagrama de conexões
 
-  <img src="" width="" />
+  <img src="" width="" /> 
   
 
 
