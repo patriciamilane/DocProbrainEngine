@@ -21,11 +21,20 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
   - gameplay.xml
   - index.html
 - src
-  - [engines](#engines)
-    - [ManagerServices.js](#manager-services)
-    - [probrain-base-engine.js](#probrain-base-engine)
+   - [engines](#engines)
+      - [ManagerServices.js](#manager-services)
+      - [probrain-base-engine.js](#probrain-base-engine)
+   - [services](#services)
+      - [advertisingEngine.js](#advertising-engine)
+      - [debuggerEngine.js](#debugger-engine)
+      - [layoutEngine.js](#layout-engine)
+      - [serverEngine.js](#server-engine)
+      - [xmlManager.js](#xml-manager)
+  - [main.js](#main-js)
 
-  - services
+     
+   
+    
 
 ### Manager Services
 
@@ -37,18 +46,10 @@ Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, 
 Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Através das implementações programadas, a aplicação realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine.
 
 
-### Diagrama de diretorios
+### Diagrama de conexões
 
-  <img src="https://github.com/patriciamilane/DocProbrainEngine/blob/main/img/Screenshot_1.png" width="650" />
+  <img src="" width="" />
   
-  ### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 
 
 
