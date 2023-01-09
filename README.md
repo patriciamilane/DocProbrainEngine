@@ -43,7 +43,7 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 
   Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Através das implementações programadas, a aplicação realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine.
   
-  O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando, e a partir disso, . 
+  O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando. 
   O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas, 
 
 
@@ -60,7 +60,7 @@ kkk
 
 ### Probrain Config Json
 
-Nele são encontradas as informações de configurações correspondente a cada aplicação (local, dev, prod) separados no formato json. A partir dele é possível definir os locais e endpoints correspondentes ao acesso de cada funcionalidade, permitindo de forma fácil e clara o acesso e manipulação dessas configurações.
+Nele são encontradas as informações de configurações correspondente a cada aplicação (local, dev, homolog, prod) separados no formato json. A partir dele é possível definir os locais e endpoints correspondentes ao acesso de cada funcionalidade, permitindo de forma fácil e clara o acesso e manipulação dessas configurações.
 
 
 ### Vue Config js
