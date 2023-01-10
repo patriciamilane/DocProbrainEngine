@@ -44,7 +44,9 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
   Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Através das implementações programadas, a aplicação realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine.
   
   O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando. 
-  O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas, 
+  O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
+  
+  jsObject é o nome da variavel que o probrainengine vai ter durante a execução
 
 
 ### Probrain Base Engine
