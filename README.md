@@ -13,7 +13,7 @@ npm install -g @vue/cli
 vue ui
 ```
 
-A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira visual, realizar processos sem utilizar os comandos padrão. 
+A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira visual, realizar processos sem utilizar comandos padrão. 
 
 ## Dependencias
 
@@ -23,7 +23,7 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 - src
    - [engines](#engines)
       - [ManagerServices.js](#manager-services)
-      - [probrain-base-engine.js](#probrain-base-engine)
+      - probrain-base-engine.js
    - [services](#services)
       - [advertisingEngine.js](#advertising-engine)
       - [debuggerEngine.js](#debugger-engine)
@@ -37,32 +37,30 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 
      
    
-    
+## Engines    
 
 ### Manager Services
 
   Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Assim, realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine.
-  O Manager Services se conecta aos serviços implementados e envia parametros de autenticação, permitindo assim a execução das funções do serviço. 
- 
-   Através das implementações programadas, o
   
-  Cada serviço possui funções diferentes, o manager services se conecta e envia parametros à essas funções, a fim de executá-las (de forma segura). 
-    
-  O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando. 
-  O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
+  O Manager Services se conecta aos [serviços](#services) implementados e envia parametros de autenticação, permitindo então a validação e execução das funções desses serviços. 
+       
+  O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando. O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
   
-  jsObject é o nome da variavel que o probrainengine vai ter durante a execução
+
+## Services
+
+### Advertising Engine
 
 
-### Probrain Base Engine
 
-Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, 
+
 
 ### Form Suggestion Engine
 
 ### Server Engine
 
-kkk
+O server Engine realiza toda a comunicação com o servidor através de endpoints. A comunicação dos plugins dos exports dos jogos é também feita através dele, e todo salvamento de pontuação das jogadas é feita a partir dessa comunicação. 
 
 
 ### Probrain Config Json
