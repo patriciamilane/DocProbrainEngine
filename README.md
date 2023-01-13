@@ -41,8 +41,9 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 
 ### Manager Services
 
-  Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Através das implementações programadas, a aplicação realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine.
-  
+  Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Cada serviço possui funções diferentes, o manager services se conecta e envia parametros à essas funções, a fim de executá-las (de forma segura). 
+  Através das implementações programadas, a aplicação realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine.
+    
   O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando. 
   O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
   
