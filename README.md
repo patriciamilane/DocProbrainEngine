@@ -33,6 +33,7 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
       - [serverEngine.js](#server-engine)
       - [xmlManager.js](#xml-manager)
   - [main.js](#main-js)
+  - [probrain_config.json](#probrain-config-json)
 - [vue.config.js](#vue-config-js)
 
      
@@ -52,21 +53,33 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 
 ### Advertising Engine
 
+~~propagandas que aparecem nos jogos em usuários free~~
 
-
-
+### Debugger Engine
 
 ### Form Suggestion Engine
 
+### Html Engine
+
+### Layout Engine
+
 ### Server Engine
 
-O server Engine realiza toda a comunicação com o servidor através de endpoints. A comunicação dos plugins dos exports dos jogos é também feita através dele, e todo salvamento de pontuação das jogadas é feita a partir dessa comunicação. 
+O server Engine realiza toda a comunicação com o servidor através de endpoints. A partir dele, a aplicação consegue verificar os parametros e tokens necessários na sessão.
 
+A comunicação dos plugins dos exports dos jogos é também feita através dele, além de todo salvamento de pontuação dos jogos. 
+
+### Xml Manager
+
+
+### Main 
 
 ### Probrain Config Json
 
 Nele são encontradas as informações de configurações correspondente a cada aplicação (local, dev, homolog, prod) separados no formato json. A partir dele é possível definir os locais e endpoints correspondentes ao acesso de cada funcionalidade, permitindo de forma fácil e clara o acesso e manipulação dessas configurações.
 
+
+### Probrain Config Json
 
 ### Vue Config js
 
