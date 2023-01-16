@@ -67,7 +67,10 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 
 O server Engine realiza toda a comunicação com o servidor através de endpoints. A partir dele, a aplicação consegue verificar os parametros e tokens necessários na sessão.
 
-A comunicação dos plugins dos exports dos jogos é também feita através dele, além de todo salvamento de pontuação dos jogos. 
+A comunicação dos plugins dos exports dos jogos é também feita através do serverEngine, além de todo salvamento de pontuação. 
+
+A função ```onConfigurationLoadByJsons``` indica quando deve ser carregada as configurações dos  jogos pelo servidor. ```isGoneUseJson``` verifica se a comunicação base do jogo será feita através de Json. ```getJsonInfoString``` retorna as informações do servidor para a aplicação. ```SaveJsonConfiguration```
+
 
 ### Xml Manager
 
