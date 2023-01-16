@@ -69,7 +69,7 @@ O server Engine realiza toda a comunicação com o servidor através de endpoint
 
 A comunicação dos plugins dos exports dos jogos é também feita através do serverEngine, além de todo salvamento de pontuação. 
 
-A função ```onConfigurationLoadByJsons``` indica quando deve ser carregada as configurações dos  jogos pelo servidor. ```isGoneUseJson``` verifica se a comunicação base do jogo será feita através de Json. ```getJsonInfoString``` retorna as informações do servidor para a aplicação. ```SaveJsonConfiguration```
+A função ```onConfigurationLoadByJsons``` indica quando deve ser carregada as configurações dos  jogos pelo servidor. ```isGoneUseJson``` verifica se a comunicação base do jogo será feita através de Json. ```getJsonInfoString``` retorna as informações do usuários pelo servidor para a aplicação. ```SaveJsonConfiguration``` converte o json para string, recebe o token de ativo na sessão e salva as congigurações do jogo no servidor. Na função ```loadJsonConfiguration``` ele carregará as configurações recebidas do jogo pelo servidor e verificará se deve deve ou não realizar o bloqueio dessa configuração a partir do objeto? ```blockConfiguration```, se não, será carregada pelo ```jsonLoaded```. ```jsonConfigurationInfo``` recebe as informações para carregar o json, e checa se a sessão do usuário é valida no server a partir da função ```checkUser```; Nessa função estão integradas as plataformas next e maratona. Para realizar a conversão da data e horário, é utilizada a função ```timeFormat``` para exibi-los conforme desejado. A função saveData recebe o objeto contendo o id do usuário, jogo e checa a sessão para realizar o salvamento de pontuação no servidor.
 
 
 ### Xml Manager
