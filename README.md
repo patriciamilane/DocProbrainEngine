@@ -100,8 +100,13 @@ Após a criação do json, o ```saveDataToServer``` fica responsável pelo salva
 
 ### Xml Manager
 
-O xmlManager trabalha principalmente com os arquivos xml dos jogos, fazendo o conversões e armazenamento dessas informações do jogo. A função ```parseXml``` é a responsável por retornar o xml interpretado pelo navegador.
-```getGameplay``` 
+O xmlManager trabalha principalmente com os arquivos xml dos jogos, fazendo o conversões e armazenamento dessas informações do jogo. 
+
+A função ```parseXml``` é a responsável por retornar o xml interpretado pelo navegador.
+```getGameplay``` realiza o acesso ao Gameplay.xml do jogo.
+```parseXml``` retorna o arquivo xml formatado de forma a facilitar a leitura.
+```MaxLevelVerifyXML``` verifica o Max Level disponível no Gameplay.xml, ......
+
 
 ### Main 
 
