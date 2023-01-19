@@ -53,6 +53,14 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 
 ### Advertising Engine
 
+Em usuários que não possuem um plano, ao finalizar a partida de um jogo freemium no portal, são exibidas propagandas do Afinando. Essas propagandas são exibidas atraves de css e html setados no arquivo adversitingEngine.js, do qual interagem com o JavaScript para ser exibido da forma e condição correta. 
+
+A função ```loadAdversiting``` conversa com o servidor e obtem a ............
+
+```getFrequency``` ........
+
+
+
 ~~propagandas que aparecem nos jogos em usuários free~~
 
 ### Debugger Engine
@@ -80,6 +88,7 @@ A função ```onConfigurationLoadByJsons``` indica quando deve ser carregada as 
 ```SaveJsonConfiguration``` converte o json para string, recebe o token de ativo na sessão e salva as configurações do jogo no servidor. 
 
 Na função ```loadJsonConfiguration``` ele carregará as configurações recebidas do jogo pelo servidor e verificará se deve deve ou não realizar o bloqueio dessa configuração a partir do objeto? ```blockConfiguration```, se não, será carregada pelo ```jsonLoaded```.
+
 ```jsonConfigurationInfo``` recebe as informações para carregar o json através do caminho inicializado em this.infoJson, e checa se a sessão do usuário é valida no server a partir da função ```checkUser```; Nessa função estão integradas as plataformas next e maratona. 
 
 Para realizar a conversão da data e horário, é utilizada a função ```timeFormat``` para exibi-los conforme desejado. 
@@ -100,12 +109,17 @@ Após a criação do json, o ```saveDataToServer``` fica responsável pelo salva
 
 ### Xml Manager
 
-O xmlManager trabalha principalmente com os arquivos xml dos jogos, fazendo o conversões e armazenamento dessas informações do jogo. 
+O xmlManager trabalha principalmente com os arquivos xml dos jogos, fazendo o conversões e armazenamento das informações de jogada. 
 
-A função ```parseXml``` é a responsável por retornar o xml interpretado pelo navegador.
+A função ```parseXml``` é a responsável por retornar o xml formatado, facilitando seu acesso.
+
 ```getGameplay``` realiza o acesso ao Gameplay.xml do jogo.
-```parseXml``` retorna o arquivo xml formatado de forma a facilitar a leitura.
+
 ```MaxLevelVerifyXML``` verifica o Max Level disponível no Gameplay.xml, ......
+
+```getLanguage``` conversa com o servidor a fim de obter e armazenar o language.xml dos jogos.
+
+```loadXML``` é a função que recebe o documento xml convertido (não utilizada). 
 
 
 ### Main 
