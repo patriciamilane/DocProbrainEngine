@@ -1,8 +1,6 @@
 # PROBRAIN ENGINE
-texto
 <br>
-texto 2
----
+
 
 ProbrainEngine é uma implementação que permite intermeditar comunicações com o servidor. Através dele é possível receber sinais e mapear todos os eventos envolvendo o usuario como suas permissões, jogadas, pontuações, além de controlar todas as instancias dos jogos.
 
@@ -59,10 +57,11 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 
 Em usuários que não possuem um plano, ao finalizar a partida de um jogo freemium no portal, são exibidas propagandas do Afinando. Essas propagandas são exibidas atraves de css e html setados no arquivo adversitingEngine.js, do qual interagem com o JavaScript para ser exibido da forma e condição correta. 
 
-A função ```loadAdversiting``` conversa com o servidor e obtem a ............
+A função ```loadAdversiting``` conversa com o servidor e obtem as informações que devem ser carregadas para o usuario e sua frequencia ???. 
 
-```getFrequency``` ........
+```getFrequency``` recebe o tipo de usuário e seus parametros, a partir disso verificia sua permissão e retorna a frequencia??? ........
 
+```processAdvertising``` verifica inicialmente se não é uma requisição da maratona. Ao verificar requisitos, a função acessa o localStorage a fim de verificar parametros existentes ao usuario
 
 
 ~~propagandas que aparecem nos jogos em usuários free~~
