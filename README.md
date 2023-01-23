@@ -61,16 +61,25 @@ A função ```loadAdversiting``` conversa com o servidor e obtem as informaçõe
 
 ```getFrequency``` recebe o tipo de usuário e seus parametros, a partir disso verificia sua permissão e retorna a frequencia??? ........
 
-```processAdvertising``` verifica inicialmente se não é uma requisição da maratona. Ao verificar requisitos, a função acessa o localStorage a fim de verificar parametros existentes ao usuario
+```processAdvertising``` verifica inicialmente se não é uma requisição da maratona. Ao verificar requisitos, a função acessa o localStorage a fim de obter os parametros existentes ao usuario, como id do login. Também armazena informações armazenadas em cache relacionados a frequencia ??? das exibições, e processa a função que mostras a propagandas???.
 
-
-~~propagandas que aparecem nos jogos em usuários free~~
+```showAdvertising``` exibe por fim o modal responsavel por transmitir a propaganda.
 
 ### Debugger Engine
+
+```getVersion``` retorna a versão da aplicação rodada, essa versão é obtida com a verificação da privateKey através do managerServices.js.
+
+```log``` é a função que verifica se os parametros recebidos não estão vazios e reescreve os erros apresentados pelo jogo no navegador.
+
+```call_dinamic_method``` ???? arguments
+
+```saveLog``` recebe o parametro console e verifica se existem informações no navegador e realiza a conversão dessas informações através do metodo stringify caso sejam um objeto. A função tambem tem como objetivo simular o click do mouse na aplicação. A conversão de formato de data e hora é realizada nessa função, a fim de salvar os logs recebidos em um arquivo e manter suas informações legíveis.
 
 ### Form Suggestion Engine
 
 ### Html Engine
+
+```removeCanvas```
 
 ### Layout Engine
 
