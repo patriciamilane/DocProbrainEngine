@@ -75,24 +75,6 @@ A função ```loadAdversiting``` conversa com o servidor e obtem as informaçõe
 
 ```saveLog``` recebe o parametro console e verifica se existem informações no navegador e realiza a conversão dessas informações através do metodo stringify caso sejam um objeto. A função tambem tem como objetivo simular o click do mouse na aplicação. A conversão de formato de data e hora é realizada nessa função, a fim de salvar os logs recebidos em um arquivo e manter suas informações legíveis.
 
-### Form Suggestion Engine
-
-Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber os feedbacks submetidos pelos usuários. Nele é setado o html para definir a aparencia que o formulário deve ter e um objeto de tradução dos textos presentes nele.
-
-```initFormStyle``` se conecta as fontes do google e carrega o css do formulário.
-
-```translate``` recebe a linguagem que deverá ser exibido o formulário.
-
-```initFormHTML``` 
-
-```submitForm```
-
-```setFeedbackForm```
-
-```showForm```
-
-
-
 
 ### Html Engine
 
@@ -162,6 +144,26 @@ A função ```parseXml``` é a responsável por retornar o xml formatado, facili
 ```getLanguage``` conversa com o servidor a fim de obter e armazenar o language.xml dos jogos.
 
 ```loadXML``` é a função que recebe o documento xml convertido (não utilizada). 
+
+### Form Suggestion Engine
+
+Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber os feedbacks submetidos pelos usuários. Nele é setado o html para definir a aparencia que o formulário deve ter e um objeto de tradução dos textos presentes nele.
+
+```initFormStyle``` se conecta as fontes do google e carrega o css do formulário.
+
+```translate``` recebe a linguagem que deverá ser exibido o formulário.
+
+```initFormHTML``` 
+
+```submitForm```
+
+```setFeedbackForm```
+
+```showForm```
+
+
+
+
 
 ### Layout Engine
 
