@@ -77,15 +77,32 @@ A função ```loadAdversiting``` conversa com o servidor e obtem as informaçõe
 
 ### Form Suggestion Engine
 
+Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber os feedbacks submetidos pelos usuários. Nele é setado o html para definir a aparencia que o formulário deve ter e um objeto de tradução dos textos presentes nele.
+
+```initFormStyle``` se conecta as fontes do google e carrega o css do formulário.
+
+```translate``` recebe a linguagem que deverá ser exibido o formulário.
+
+```initFormHTML``` 
+
+```submitForm```
+
+```setFeedbackForm```
+
+```showForm```
+
+
+
+
 ### Html Engine
 
 Nesse arquivo, códigos em html são setados e carregados, a fim de definir como o conteudo será exibido na tela.
 
 ```removeCanvas``` ???
 
-```loadStyle``` está recebendo o css por parametro e definindo como será sua exibição no documento.
+```loadStyle``` está recebendo o css por parametro e definindo como será sua exibição no documento. o Css recebido é setado em formSuggestionEngine.
 
-```addLinkCSSHead``` nesta função, a linkagem do arquivo css é setado dentro do documento.
+```addLinkCSSHead``` nesta função, a linkagem do arquivo css é setado dentro do documento. Também é utilizado para se conectar a fontes do google e outras Apis.
 
 ```addModal``` recebe os parametros nome e o conteúdo que deverá ser exibido e determina suas demais configurações de exibição por meio de html. Um de seus usos é na função que carrega propagandas em usuários free, neste caso, o html embutido permitirá que a propaganda seja carregada com os tamanhos e design desejados.
 
@@ -93,9 +110,8 @@ Nesse arquivo, códigos em html são setados e carregados, a fim de definir como
 
 ```showModal``` define qual modal deverá ser exibido com base em seu index. Na aplicação ele chamado para exibir os modais como de propaganda e do formulário de sugestões.
 
-```loadHtml``` 
+```loadHtml``` recebe o html setado em formSuggestion.js como parametro, e o carrega para que seja exibido. É utilizado principalmente na função principal do documento, e no layoutEngine.
 
-### Layout Engine
 
 ### Server Engine
 
@@ -147,6 +163,21 @@ A função ```parseXml``` é a responsável por retornar o xml formatado, facili
 
 ```loadXML``` é a função que recebe o documento xml convertido (não utilizada). 
 
+### Layout Engine
+
+```redirectFailure```
+```getBlockLevel```
+```correctCountUpdate```
+```layoutEngine```
+```redirectFailure```
+```maxLevel```
+```updateLanguage```
+```layoutUpdate```
+```ErrorCountUpdate```
+```roundUpdate```
+```redirectClose```
+```getConfigurationBlockLevel```
+```getMemoryType```
 
 ### Main 
 
