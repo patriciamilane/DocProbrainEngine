@@ -38,7 +38,17 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
   - [probrain_config.json](#probrain-config-json)
 - [vue.config.js](#vue-config-js)
 
-     
+ 
+
+### Vue Config js
+
+A implementação do Probrain Engine foi desenvolvida com JavaScript para minimizar problemas de performance. Para compilar o código, é utilizado o Vue, a fim de permitir que o codigo seja modificado e facilmente interpretado pelo navegador. Um dos arquivos que se beneficia dessa compilação através do Vue, é o probrainengine.js, utilizado pelos jogos.
+
+### Probrain Config Json
+
+Nele são encontradas as informações de configurações correspondente a cada aplicação (local, dev, homolog, prod) separados no formato json. A partir dele é possível definir os locais e endpoints correspondentes ao acesso de cada funcionalidade, permitindo de forma fácil e clara o acesso e manipulação dessas configurações.
+
+Para todas as features a serem introdudas na aplicação, é necessario adicionar a configuração em probrain_config.json e adicionar no server para ser incluído.
    
 ## Engines    
 
@@ -183,16 +193,6 @@ Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber 
 
 ### Main 
 
-### Probrain Config Json
-
-Nele são encontradas as informações de configurações correspondente a cada aplicação (local, dev, homolog, prod) separados no formato json. A partir dele é possível definir os locais e endpoints correspondentes ao acesso de cada funcionalidade, permitindo de forma fácil e clara o acesso e manipulação dessas configurações.
-
-
-### Probrain Config Json
-
-### Vue Config js
-
-A implementação do Probrain Engine foi desenvolvida com JavaScript para minimizar problemas de performance. Para compilar o código, é utilizado o Vue, a fim de permitir que o codigo seja modificado e facilmente interpretado pelo navegador. Um dos arquivos que se beneficia dessa compilação através do Vue, é o probrainengine.js, utilizado pelos jogos.
 
 
 ### Diagrama de conexões
