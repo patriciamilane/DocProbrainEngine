@@ -164,13 +164,13 @@ Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber 
 
 ```translate``` recebe a linguagem que deverá ser exibido o formulário, se essa linguagem for falsa, será setado para o padrão pt_br.
 
-```initFormHTML``` recebe o html setado no documento e mapeia os textos de acordo com a linguagem recebida.
+```initFormHTML``` recebe o html setado no documento e mapeia os textos de acordo com a linguagem recebida e mapeia a interação do usuario com o submit do formulário.
 
-```submitForm```
+```submitForm``` salva as informações do usuário, mensagem de feedback, jogo, jogadas e informações das configurações e o envia ao servidor. Também é verificado se o email preenchido é válido para que o feedback seja enviado com sucesso.
 
-```setFeedbackForm```
+```setFeedbackForm``` recebe o tipo e conteudo do feedback enviado.
 
-```showForm```
+```showForm``` exibe o modal 
 
 
 
