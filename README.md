@@ -96,6 +96,7 @@ Nesse arquivo, códigos em html são setados e carregados, a fim de definir como
 
 ```addLinkCSSHead``` nesta função, a linkagem do arquivo css é setado dentro do documento. Também é utilizado para se conectar a fontes do google e outras Apis.
 
+
 ```addModal``` recebe os parametros nome e o conteúdo que deverá ser exibido e determina suas demais configurações de exibição por meio de html. Um de seus usos é na função que carrega propagandas em usuários free, neste caso, o html embutido permitirá que a propaganda seja carregada com os tamanhos e design desejados.
 
 ```cleanMethods``` -- função vazia.
@@ -161,9 +162,9 @@ Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber 
 
 ```initFormStyle``` se conecta as fontes do google e carrega o css do formulário.
 
-```translate``` recebe a linguagem que deverá ser exibido o formulário.
+```translate``` recebe a linguagem que deverá ser exibido o formulário, se essa linguagem for falsa, será setado para o padrão pt_br.
 
-```initFormHTML``` 
+```initFormHTML``` recebe o html setado no documento e mapeia os textos de acordo com a linguagem recebida.
 
 ```submitForm```
 
