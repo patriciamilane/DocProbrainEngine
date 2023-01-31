@@ -81,14 +81,15 @@ A função ```loadAdversiting``` conversa com o servidor e obtem as informaçõe
 
 ```log``` é a função que verifica se os parametros recebidos não estão vazios e reescreve os erros apresentados pelo jogo no navegador.
 
-```call_dinamic_method``` ???? arguments
+```call_dinamic_method``` recebe através de array os arguments, que são os parametros da aplicação. Verifica especificamente o indice 0, que é correspondente ao private key. 
+
 
 ```saveLog``` recebe o parametro console e verifica se existem informações no navegador e realiza a conversão dessas informações através do metodo stringify caso sejam um objeto. A função tambem tem como objetivo simular o click do mouse na aplicação. A conversão de formato de data e hora é realizada nessa função, a fim de salvar os logs recebidos em um arquivo e manter suas informações legíveis.
 
 
 ### Html Engine
 
-Nesse arquivo, códigos em html são setados e carregados, a fim de definir como o conteudo será exibido na tela.
+Nesse arquivo, códigos em html são setados e carregados, a fim de definir como o conteudo será exibido na tela. 
 
 ```removeCanvas``` ???
 
@@ -96,10 +97,9 @@ Nesse arquivo, códigos em html são setados e carregados, a fim de definir como
 
 ```addLinkCSSHead``` nesta função, a linkagem do arquivo css é setado dentro do documento. Também é utilizado para se conectar a fontes do google e outras Apis.
 
-
 ```addModal``` recebe os parametros nome e o conteúdo que deverá ser exibido e determina suas demais configurações de exibição por meio de html. Um de seus usos é na função que carrega propagandas em usuários free, neste caso, o html embutido permitirá que a propaganda seja carregada com os tamanhos e design desejados.
 
-```cleanMethods``` -- função vazia.
+```cleanMethods``` função vazia, é chamada em addModal quando o elemento sofre alguma alteração.
 
 ```showModal``` define qual modal deverá ser exibido com base em seu index. Na aplicação ele chamado para exibir os modais como de propaganda e do formulário de sugestões.
 
@@ -138,9 +138,9 @@ A função ```saveData``` recebe o objeto contendo o id do usuário, jogo e chec
 
 Após a criação do json, o ```saveDataToServer``` fica responsável pelo salvamento dessas informações no servidor, além da conversão e organização das informações recebidas e salvas.  
 
-```saveDataScript``` recebe as informações que foram salvas no servidor ?????
+```saveDataScript``` pega os parametros recebidos e salva no servidor.  
 
-```loadData```...
+```loadData``` acessa e carrega os dados do jogo e dados do usuário no servidor e verifica se seu token está ativo na sessão. 
 
 ### Xml Manager
 
