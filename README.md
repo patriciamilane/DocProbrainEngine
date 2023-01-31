@@ -175,25 +175,27 @@ Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber 
 
 ### Layout Engine
 
-```redirectFailure```
+```redirectFailure``` função que redireciona o usuário para outro local caso não consiga identificar o recebimento de algum parametro necessário para executar a tarefa acessada.
 
 
-```getBlockLevel```
+```getBlockLevel``` bloqueia os níveis do jogo de serem acessados. A função verifica o xml do jogo e identifica se está habilitado para bloquear determinado nível ou não, dependendo da lógica recebida pelo servidor.
 
 
 ```correctCountUpdate```
 
 
 ```layoutEngine```
-```redirectFailure```
-```maxLevel```
+
+```maxLevel``` retorna o Max Level contido no xml. Sua identificação é feita através da tag <levelN>.
+
 ```updateLanguage```
 ```layoutUpdate```
 ```ErrorCountUpdate```
 ```roundUpdate```
 ```redirectClose```
 ```getConfigurationBlockLevel```
-```getMemoryType```
+  
+```getMemoryType``` retorna os áudios contidos no arquivo ??? do jogo.
 
 ### Main 
 
