@@ -170,17 +170,20 @@ Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber 
 
 ```setFeedbackForm``` recebe o tipo e conteudo do feedback enviado.
 
-```showForm``` exibe o modal 
-
-
-
+```showForm``` exibe o modal com o formulário do feedback.
 
 
 ### Layout Engine
 
 ```redirectFailure```
+
+
 ```getBlockLevel```
+
+
 ```correctCountUpdate```
+
+
 ```layoutEngine```
 ```redirectFailure```
 ```maxLevel```
