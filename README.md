@@ -71,7 +71,7 @@ A função ```loadAdversiting``` conversa com o servidor e obtem as informaçõe
 
 ```getFrequency``` recebe o tipo de usuário e seus parametros, a partir disso verificia sua permissão e retorna a frequencia??? ........
 
-```processAdvertising``` verifica inicialmente se não é uma requisição da maratona. Ao verificar requisitos, a função acessa o localStorage a fim de obter os parametros existentes ao usuario, como id do login. Também armazena informações armazenadas em cache relacionados a frequencia ??? das exibições, e processa a função que mostras a propagandas???.
+```processAdvertising``` verifica inicialmente se não é uma requisição da maratona. Ao verificar requisitos, a função acessa o localStorage a fim de obter os parametros existentes ao usuario, como id do login. Também armazena informações armazenadas em cache relacionados a frequencia ??? das exibições, e processa a função que mostras a propagandas no final dos jogos aos usuários free.
 
 ```showAdvertising``` exibe por fim o modal responsavel por transmitir a propaganda.
 
