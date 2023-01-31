@@ -181,19 +181,23 @@ Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber 
 ```getBlockLevel``` bloqueia os níveis do jogo de serem acessados. A função verifica o xml do jogo e identifica se está habilitado para bloquear determinado nível ou não, dependendo da lógica recebida pelo servidor.
 
 
-```correctCountUpdate```
+```correctsCountUpdate``` realiza o controle do código e layout nas contagens de respostas corretas da jogada.
 
 
 ```layoutEngine```
 
 ```maxLevel``` retorna o Max Level contido no xml. Sua identificação é feita através da tag <levelN>.
 
-```updateLanguage```
-```layoutUpdate```
-```ErrorCountUpdate```
-```roundUpdate```
-```redirectClose```
-```getConfigurationBlockLevel```
+```updateLanguage``` função que atualiza o layout sempre que a linguagem é alterada.
+```layoutUpdate``` tem a função responsável por atualizar o código nos layouts necessários e verificar se a sessão não expirou sempre que um layout for iniciado.
+
+```ErrorCountUpdate``` verifica e atualiza o código em determinadas contagens de respostas incorretas da jogada.
+
+```roundUpdate``` Atualiza o código em determinada rodada do usuário, além de verificar se a sessão expirou ao iniciar o layout do gameplay.
+
+```redirectClose``` utiliza a função redirectFailure para redirecionar a guia ou fechá-la.
+
+```getConfigurationBlockLevel``` Define as configurações que deverão ser exibidas e bloqueia as demais conforme definido por nível.
   
 ```getMemoryType``` retorna os áudios contidos no arquivo ??? do jogo.
 
