@@ -60,6 +60,13 @@ Para todas as features a serem introdudas na aplicação, é necessario adiciona
        
   O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando. O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
   
+  ______________________
+  
+  
+  
+  
+  ______________________
+  
 
 ## Services
 
