@@ -61,7 +61,12 @@ Para todas as features a serem introdudas na aplicação, é necessario adiciona
   O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando. O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
   
   ______________________
-  
+  Processa as urls de configuração perante a URL.
+  Extende todos os serviços perante a configuração em um unico objeto.
+  Processa e adiciona um parametro extra para todos os metodos chamado private key.
+  Ao instanciar o Probrain Engine, é necessário o envio da private key.
+  Todas as chamadas para o Probrain Engine precisa enviar o private key.
+  o managerServices roteia pras funções correspondentes os argumentos chamados
   
   
   
