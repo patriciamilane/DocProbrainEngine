@@ -15,7 +15,7 @@ npm install -g @vue/cli
 vue ui
 ```
 
-A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira visual, realizar processos sem utilizar comandos padrão. 
+A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira visual, realizar processos sem utilizar comandos padrão. A partir dele, também é possível instalar dependencias a serem utilizadas no projeto e testar o funcionamento da aplicação.
 
 ## Dependencias
 
@@ -54,7 +54,8 @@ Para todas as features a serem introdudas na aplicação, é necessario adiciona
 
 ### Manager Services
 
-  Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Assim, realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine.
+  Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Assim, realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine. 
+Essa chamada é feita a partir das urls existentes no arquivo probrain_config.json, que são processadas conforme as urls setadas no objeto ruleConfig.
   
   O Manager Services se conecta aos [serviços](#services) implementados e envia parametros de autenticação, permitindo então a validação e execução das funções desses serviços. 
        
@@ -62,7 +63,7 @@ Para todas as features a serem introdudas na aplicação, é necessario adiciona
   
   ______________________
   Processa as urls de configuração perante a URL.
-  Extende todos os serviços perante a configuração em um unico objeto.
+  Estende todos os serviços perante a configuração em um unico objeto.
   Processa e adiciona um parametro extra para todos os metodos chamado private key.
   Ao instanciar o Probrain Engine, é necessário o envio da private key.
   Todas as chamadas para o Probrain Engine precisa enviar o private key.
@@ -245,7 +246,7 @@ Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber 
 
 ```getConfigurationBlockLevel``` Define as configurações que deverão ser exibidas e bloqueia as demais conforme definido por nível.
   
-```getMemoryType``` retorna os áudios contidos no arquivo ??? do jogo.
+```getFreeMemoryType``` retorna os áudios contidos no arquivo do jogo a partir de sua string correspondente.
 
 <div align="center">
 
