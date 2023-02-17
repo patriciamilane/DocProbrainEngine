@@ -42,7 +42,7 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 
 ### Vue Config js
 
-A implementação do Probrain Engine foi desenvolvida com JavaScript para minimizar problemas de performance. Para compilar o código, é utilizado o Vue, a fim de permitir que o codigo seja modificado e facilmente interpretado pelo navegador. Um dos arquivos que se beneficia dessa compilação através do Vue, é o probrainengine.js, utilizado pelos jogos.
+A implementação do Probrain Engine foi desenvolvida com JavaScript para minimizar problemas de performance. Para compilar o código, é utilizado o Vue, a fim de permitir que o codigo seja modificado - nesse caso o código é mimificado - e facilmente interpretado pelo navegador. Um dos arquivos que se beneficia dessa compilação através do Vue, é o probrainengine.js, utilizado pelos jogos.
 
 ### Probrain Config Json
 
@@ -58,9 +58,11 @@ Para todas as features a serem introdudas na aplicação, é necessario adiciona
 Essa chamada é feita a partir das urls existentes no arquivo probrain_config.json, que são processadas conforme as urls setadas no objeto ruleConfig.
 
   
-  O Manager Services processa os [serviços](#services) implementados e envia parametros de autenticação, permitindo então a validação e execução das funções desses serviços. Essa validação se dá por meio do private key, sendo o parametro extra utilizado em todos os métodos e todas as chamadas ao Probrain Engine, sem ela não é possível instanciar o Probrain Engine.
+  O Manager Services processa os [serviços](#services) implementados e envia parametros de autenticação, permitindo então a validação e execução das funções desses serviços. Essa validação se dá por meio do private key, sendo o parametro extra utilizado em todos os métodos e todas as chamadas realizadas pela aplicação, sem ela não é possível instanciar o Probrain Engine.
        
-  O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando. O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
+  O objeto `ruleConfig` apresenta a url de todas as aplicações, a partir dele o Probrain Engine realiza a identificação do local que o usuário está acessando. O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
+  
+  `includeClass` recebe todos os serviços e cria um array com o que será necessário estender. A partir disso, a função `extendAllArray` recebe esse array de objetos, inicializa o Probrain Engine através de seu metodo construtor e adiciona os parametros automaticamente nas classes e metodos inicializados. 
   
   ______________________
   
