@@ -56,17 +56,24 @@ Para todas as features a serem introdudas na aplicação, é necessario adiciona
 
   Os jogos desenvolvidos compoem diversas aplicações da empresa, devido a isso, o manager services define quais configurações deverão ser carregadas. Assim, realiza a chamada do endpoint e as informações são carregadas e salvas de forma correspondente por intermédio do probrain engine. 
 Essa chamada é feita a partir das urls existentes no arquivo probrain_config.json, que são processadas conforme as urls setadas no objeto ruleConfig.
+
   
-  O Manager Services se conecta aos [serviços](#services) implementados e envia parametros de autenticação, permitindo então a validação e execução das funções desses serviços. 
+  O Manager Services processa os [serviços](#services) implementados e envia parametros de autenticação, permitindo então a validação e execução das funções desses serviços. Essa validação se dá por meio do private key, sendo o parametro extra utilizado em todos os métodos e todas as chamadas ao Probrain Engine, sem ela não é possível instanciar o Probrain Engine.
        
   O objeto `ruleConfig` instancia a url das aplicações para permitir a identificação do local que o usuário está acessando. O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
   
   ______________________
-  Processa as urls de configuração perante a URL.
-  Estende todos os serviços perante a configuração em um unico objeto.
-  Processa e adiciona um parametro extra para todos os metodos chamado private key.
-  Ao instanciar o Probrain Engine, é necessário o envio da private key.
-  Todas as chamadas para o Probrain Engine precisa enviar o private key.
+  
+  
+  Processa as urls de configuração perante a URL. ok
+  
+  Estende todos os serviços perante a configuração em um unico objeto.???
+  
+  Processa e adiciona um parametro extra para todos os metodos chamado private key. ok?
+  
+  Ao instanciar o Probrain Engine, é necessário o envio da private key. ok
+  Todas as chamadas para o Probrain Engine precisa enviar o private key. ok
+  
   o managerServices roteia pras funções correspondentes os argumentos chamados
   
   
