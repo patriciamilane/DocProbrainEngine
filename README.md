@@ -58,7 +58,7 @@ Para todas as features a serem introdudas na aplicação, é necessario adiciona
 Essa chamada é feita a partir das urls existentes no arquivo probrain_config.json, que são processadas conforme as urls setadas no objeto ruleConfig.
 
   
-  O Manager Services processa os [serviços](#services) implementados e envia parametros de autenticação, permitindo então a validação e execução das funções desses serviços. Essa validação se dá por meio do private key, sendo o parametro extra utilizado em todos os métodos e todas as chamadas realizadas pela aplicação, sem ela não é possível instanciar o Probrain Engine.
+  O Manager Services processa os [serviços](#services) implementados e envia parametros de autenticação, permitindo então a validação e execução das funções desses serviços. Essa validação se dá por meio do private key, sendo o parametro token extra utilizado em todos os métodos e todas as chamadas realizadas pela aplicação, sem ela não é possível instanciar o Probrain Engine.
        
   O objeto `ruleConfig` apresenta a url de todas as aplicações, a partir dele o Probrain Engine realiza a identificação do local que o usuário está acessando. O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
   
@@ -82,6 +82,9 @@ Essa chamada é feita a partir das urls existentes no arquivo probrain_config.js
   
   ______________________
   
+ ### Probrain Base Engine
+  
+  A partir da classe criada a partir do Main.js, estende e cria um único objeto que agrupa todos os serviços do Probrain Engine. 
 
 ## Services
 
@@ -265,7 +268,7 @@ Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber 
 
 ### Main 
 
-
+O Main.js transforma o Probrain Engine em global, estende toda a aplicação em um unico objeto, a partir do probrain_base_engine, e realiza a verificação para permitir que se tenha acesso a todos os metodos e funções da aplicação.
 
 ### Diagrama de conexões
 
