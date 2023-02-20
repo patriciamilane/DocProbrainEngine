@@ -62,7 +62,7 @@ Essa chamada é feita a partir das urls existentes no arquivo probrain_config.js
        
   O objeto `ruleConfig` apresenta a url de todas as aplicações, a partir dele o Probrain Engine realiza a identificação do local que o usuário está acessando. O `jsonConfig` permite a comunicação com o probrain_config.json, pois é onde as informações de configuração estão salvas.
   
-  `includeClass` recebe todos os serviços e cria um array com o que será necessário estender. A partir disso, a função `extendAllArray` recebe esse array de objetos, inicializa o Probrain Engine através de seu metodo construtor e adiciona os parametros automaticamente nas classes e metodos inicializados. 
+  `includeClass` recebe todos os serviços e cria um array com o que será necessário estender. A partir disso, a função `extendAllArray` recebe esse array de objetos, inicializa o Probrain Engine através de seu metodo construtor e adiciona os parametros automaticamente nas classes e metodos inicializados. A partir dela, o Manager Services permite que os argumentos chamados sejam roteados para as funções correspondentes.
   
   ______________________
   
