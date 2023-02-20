@@ -272,6 +272,9 @@ O Main.js transforma o Probrain Engine em global, estende toda a aplicação em 
 
 ### Diagrama de conexões
 
+[### Diagrama de conexões](https://app.diagrams.net/#G1OL05MzHFdPU7QXlK6IScolWtNsn8kyph)
+
+
   <img src="" width="" /> 
   
 
