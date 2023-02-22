@@ -64,6 +64,7 @@ Essa chamada é feita a partir das urls existentes no arquivo probrain_config.js
   
   `includeClass` recebe todos os serviços e cria um array com o que será necessário estender. A partir disso, a função `extendAllArray` recebe esse array de objetos, inicializa o Probrain Engine através de seu metodo construtor e adiciona os parametros automaticamente nas classes e metodos inicializados. A partir dela, o Manager Services permite que os argumentos chamados sejam roteados para as funções correspondentes.
   
+  <img src=""/>
   ______________________
   
   
