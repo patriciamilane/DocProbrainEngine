@@ -20,8 +20,8 @@ A compilação abrirá o gerenciador de projetos do vue, que permite, de maneira
 ## Dependencias
 
 - public
-  - gameplay.xml
-  - index.html
+  - [gameplay.xml](#gameplay-xml)
+  - [index.html](index-html)
 - src
    - [engines](#engines)
       - [ManagerServices.js](#manager-services)
@@ -558,11 +558,17 @@ O Main.js transforma o Probrain Engine em global, estende toda a aplicação em 
 
   <img src="https://github.com/probrain-dev/probrainEngine/blob/server-v2.1.1-bug_report/src/img/DiagramAll.png" width="" /> 
   
+  
   ## Public
   --
   ### Index.html
   
-  Implementação criada para testes do Probrain Engine e suas chamadas. Nele é possível realizar testes do save score e envio dos tokens da aplicação, utilizando pontuação, tempo e nivel do usuario.
+  Implementação criada para testes do Probrain Engine e suas chamadas. Nele é possível realizar testes e simular o save score e envio dos tokens da aplicação, utilizando pontuação, tempo e nivel do usuario.
+  
+  ### Gameplay xml
+  
+  Configurações padrão para controle de áudio, como volume e intervalo, para serem utilizadas pelos jogos diretamente pela aplicação do Probrain Engine. Atualmente a implementação não está sendo utilizada, as configurações estão setadas e sendo utilizadas diretamente pelos jogos.
+  
   
 
 
