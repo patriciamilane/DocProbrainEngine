@@ -86,23 +86,23 @@ O server Engine realiza toda a comunicação com o servidor através de endpoint
 
 A comunicação dos plugins dos exports dos jogos é também feita através do serverEngine, além de todo salvamento de pontuação. 
 
-A função ```getAllUrlParams``` recebe a url contendo parametros como id do usuário, dos jogos, nível, linguagem, a fim de popular o queryParam, que permite ao Probrain Engine mapear e executar diversas funcionalidades com base nesses parametros recebidos. 
+```getAllUrlParams```<i>[Deprecated]</i> recebe a url contendo parametros como id do usuário, dos jogos, nível, linguagem, a fim de popular o queryParam, que permite ao Probrain Engine mapear e executar diversas funcionalidades com base nesses parametros recebidos. 
 
-A função ```onConfigurationLoadByJsons``` indica quando deve ser carregada as configurações dos  jogos pelo servidor. 
+```onConfigurationLoadByJsons``` indica quando deve ser carregada as configurações dos jogos pelo servidor. 
 
 ```isGoneUseJson``` verifica se a comunicação base do jogo será feita através de Json. 
 
-```getJsonInfoString``` retorna as informações do usuários pelo servidor para a aplicação.
+```getJsonInfoString``` <i>[Deprecated]</i> retorna as informações do usuários pelo servidor para a aplicação.
 
-```SaveJsonConfiguration``` converte o json para string, recebe o token de ativo na sessão e salva as configurações do jogo no servidor. 
+```SaveJsonConfiguration``` <i>[Deprecated]</i> converte o json para string, recebe o token de ativo na sessão e salva as configurações do jogo no servidor. 
 
-Na função ```loadJsonConfiguration``` ele carregará as configurações recebidas do jogo pelo servidor e verificará se deve deve ou não realizar o bloqueio dessa configuração a partir do objeto? ```blockConfiguration```, se não, será carregada pelo ```jsonLoaded```.
+```loadJsonConfiguration``` ele carregará as configurações recebidas do jogo pelo servidor e verificará se deve deve ou não realizar o bloqueio dessa configuração a partir do objeto ```blockConfiguration```, se não, será carregada pelo ```jsonLoaded```.
 
-```jsonConfigurationInfo``` recebe as informações para carregar o json através do caminho inicializado em this.infoJson, e checa se a sessão do usuário é valida no server a partir da função ```checkUser```; Nessa função estão integradas as plataformas next e maratona. 
+```jsonConfigurationInfo``` <i>[Deprecated]</i> recebe as informações para carregar o json através do caminho inicializado em this.infoJson, e checa se a sessão do usuário é valida no server a partir da função ```checkUser``` - que será utilizada no portal em breve; Nessa função estão integradas as plataformas next e maratona. 
 
-Para realizar a conversão da data e horário, é utilizada a função ```timeFormat``` para exibi-los conforme desejado. 
+```timeFormat``` é utilizada para realizar a conversão da data e horário e exibi-los conforme desejado. 
 
-A função ```saveData``` recebe o objeto contendo o id do usuário, jogo e checa a sessão para realizar o salvamento de pontuação no servidor. 
+```saveData``` recebe o objeto contendo o id do usuário, jogo e checa a sessão para realizar o salvamento de pontuação no servidor; Esse salvamento só acontece se a sessão estiver ativa, e essa verificação é feita apenas na 2.0, não sendo utilizada pelo Afinando atualmente. 
 
 ```cacheUpdate``` verifica se há cache armazenado em localStorage e o reseta. 
 
@@ -145,7 +145,7 @@ A função ```loadAdversiting``` conversa com o servidor e obtem as informaçõe
 
 Nesse arquivo, códigos em html são setados e carregados, a fim de definir como o conteudo será exibido na tela. 
 
-```removeCanvas``` caso o usuário não esteja logado, o removeCanvas é chamado pela função redirectFailure, a fim de verificar e destruir o canvas exibido no navegador. O canvas é utilizado para "desenhar" as formas e cores que estão sendo mandados pelos jogos. 
+```removeCanvas``` caso o usuário não esteja logado, o removeCanvas é chamado pela função redirectFailure, a fim de verificar e destruir o canvas exibido no navegador. 
 
 ```loadStyle``` está recebendo o css por parametro e definindo como será sua exibição no documento. o Css recebido é setado em formSuggestionEngine.
 
@@ -168,13 +168,13 @@ Nesse arquivo, códigos em html são setados e carregados, a fim de definir como
 
 ### Debugger Engine
 
-```getVersion``` retorna a versão da aplicação rodada, essa versão é obtida com a verificação da privateKey através do managerServices.js.
+```getVersion``` retorna a versão da aplicação ProbrainEngine.
 
-```log``` é a função que verifica se os parametros recebidos não estão vazios e reescreve os erros apresentados pelo jogo no navegador.
+```log``` é a função que verifica se s parametro recebido não está vazio e exibe no console os erros apresentados pelo jogo no navegador.
 
-```call_dinamic_method``` recebe através de array os arguments, que são os parametros da aplicação. Verifica especificamente o indice 0, que é correspondente ao private key. 
+```call_dinamic_method``` é uma função que chama funções. Ela recebe através de um array dois parametros, sendo o primeiro o nome do método que será chamado, e o segundo são os argumentos que serão chamados. 
 
-```saveLog``` recebe o parametro console e verifica se existem informações no navegador e realiza a conversão dessas informações através do metodo stringify caso sejam um objeto. A função tambem tem como objetivo simular o click do mouse na aplicação. A conversão de formato de data e hora é realizada nessa função, a fim de salvar os logs recebidos em um arquivo e manter suas informações legíveis.
+```saveLog``` recebe o parametro console, verifica se existem informações no navegador e realiza a conversão dessas informações através do metodo stringify caso sejam um objeto. A conversão de formato de data e hora é realizada nessa função, a fim de salvar os logs recebidos em um arquivo e manter suas informações legíveis.
 
 <div align="center">
 
@@ -186,7 +186,7 @@ Nesse arquivo, códigos em html são setados e carregados, a fim de definir como
 
 ### Xml Manager
 
-O xmlManager trabalha principalmente com os arquivos xml dos jogos, fazendo o conversões e armazenamento das informações de jogada. 
+O xmlManager trabalha principalmente com os arquivos xml dos jogos do Construct 2, fazendo conversões e armazenamento das informações de jogada. 
 
 A função ```parseXml``` é a responsável por retornar o xml formatado, facilitando seu acesso.
 
@@ -239,12 +239,13 @@ Seu objetivo é exibir o formulário de sugestão existente nos jogos e receber 
 
 ```maxLevel``` retorna o Max Level contido no xml. Sua identificação é feita através da tag <levelN>.
 
-```updateLanguage``` função que atualiza o layout sempre que a linguagem é alterada.
-```layoutUpdate``` tem a função responsável por atualizar o código nos layouts necessários e verificar se a sessão não expirou sempre que um layout for iniciado.
+```updateLanguage``` função chamada sempre que o usuário atualiza a linguagem do jogo.
+    
+```layoutUpdate``` é chamada sempre que o usuário muda de layout, ela é responsável por atualizar o código nos layouts necessários. Assim é possível ter controle do layout que está sendo acessado pelo usuário.
 
 ```ErrorCountUpdate``` verifica e atualiza o código em determinadas contagens de respostas incorretas da jogada.
 
-```roundUpdate``` Atualiza o código em determinada rodada do usuário, além de verificar se a sessão expirou ao iniciar o layout do gameplay.
+```roundUpdate``` é chamada sempre que a rodada do jogo muda, permitindo que o Probrain Engine tenha controle sobre as rodadas do usuário.
 
 ```redirectClose``` utiliza a função redirectFailure para redirecionar a guia ou fechá-la.
 
@@ -272,11 +273,6 @@ O Main.js transforma o Probrain Engine em global, estende toda a aplicação em 
   
   
   ## Public
-  
-  
-   ### Gameplay xml
-  
-  Configurações padrão para controle de áudio, como volume e intervalo, para serem utilizadas pelos jogos diretamente pela aplicação do Probrain Engine. Atualmente a implementação não está sendo utilizada, as configurações estão setadas e sendo utilizadas diretamente pelos jogos.
   
   
   ### Index.html
