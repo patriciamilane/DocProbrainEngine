@@ -88,7 +88,7 @@ A comunicação dos plugins dos exports dos jogos é também feita através do s
 
 ```getAllUrlParams```<i>[Deprecated]</i> recebe a url contendo parametros como id do usuário, dos jogos, nível, linguagem, a fim de popular o queryParam, que permite ao Probrain Engine mapear e executar diversas funcionalidades com base nesses parametros recebidos. 
 
-```onConfigurationLoadByJsons``` indica quando deve ser carregada as configurações dos jogos pelo servidor. 
+```onConfigurationLoadByJsons``` <i>[Deprecated]</i> indica quando deve ser carregada as configurações dos jogos pelo servidor. 
 
 ```isGoneUseJson``` verifica se a comunicação base do jogo será feita através de Json. 
 
@@ -96,7 +96,7 @@ A comunicação dos plugins dos exports dos jogos é também feita através do s
 
 ```SaveJsonConfiguration``` <i>[Deprecated]</i> converte o json para string, recebe o token de ativo na sessão e salva as configurações do jogo no servidor. 
 
-```loadJsonConfiguration``` ele carregará as configurações recebidas do jogo pelo servidor e verificará se deve deve ou não realizar o bloqueio dessa configuração a partir do objeto ```blockConfiguration```, se não, será carregada pelo ```jsonLoaded```.
+```loadJsonConfiguration``` <i>[Deprecated]</i> ele carregará as configurações recebidas do jogo pelo servidor e verificará se deve deve ou não realizar o bloqueio dessa configuração a partir do objeto ```blockConfiguration```, se não, será carregada pelo ```jsonLoaded```.
 
 ```jsonConfigurationInfo``` <i>[Deprecated]</i> recebe as informações para carregar o json através do caminho inicializado em this.infoJson, e checa se a sessão do usuário é valida no server a partir da função ```checkUser``` - que será utilizada no portal em breve; Nessa função estão integradas as plataformas next e maratona. 
 
@@ -110,7 +110,7 @@ A comunicação dos plugins dos exports dos jogos é também feita através do s
 
 ```addDataToSave``` funciona salvando a pontuação de forma dinâmica, que no godot por exemplo, conversa com a função save_score, onde estão todas as preferencias e informações relevantes do jogo selecionado, como configurações, seed, plays e demais propriedades. Essas propriedades são recebidas através do parametro tag, e caso uma tag nova seja criada, será tudo salvo dinamicamente dentro do json através do objectToSave, inicializado na função serverEngine().
 
-Após a criação do json, o ```saveDataToServer``` fica responsável pelo salvamento dessas informações no servidor, além da conversão e organização das informações recebidas e salvas.  
+```saveDataToServer``` é responsável pelo salvamento dessas informações no servidor, além da conversão e organização das informações recebidas e salvas.  
 
 ```saveDataScript``` pega os parametros recebidos e salva no servidor.  
 
@@ -127,7 +127,7 @@ Após a criação do json, o ```saveDataToServer``` fica responsável pelo salva
 
 Em usuários que não possuem um plano, ao finalizar a partida de um jogo freemium no portal, são exibidas propagandas do Afinando. Essas propagandas são exibidas atraves de css e html setados no arquivo adversitingEngine.js, do qual interagem com o JavaScript para ser exibido da forma e condição correta. 
 
-A função ```loadAdversiting``` conversa com o servidor e obtem as informações que devem ser carregadas para o usuario e sua frequencia, conforme LocalStorage. 
+```loadAdversiting``` conversa com o servidor e obtem as informações que devem ser carregadas para o usuario e sua frequencia, conforme LocalStorage. 
 
 ```getFrequency``` recebe o tipo de usuário e seus parametros, a partir disso verificia sua permissão e retorna a frequencia armazenada.
 
